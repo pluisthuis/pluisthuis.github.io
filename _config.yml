@@ -1,0 +1,38 @@
+name: Celeste's Portfolio
+title: Celeste's Portfolio
+
+# Defines github compliant markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Provides default values to pages within a given scope
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # Tag used to detect which pages are posts
+
+# Jekyll plugins
+plugins:
+  - jekyll-sitemap  # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-seo-tag  # Adds SEO tags to header to help index crawlers
+
+# # Plugin Configurations
+# mini_magick:
+#   thumbnail:
+#     source: assets/albums
+#     destination: assets/thumbnails
+#     resize: 640x480
+#     gravity: center
+
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - README.md
+  - LICENSE

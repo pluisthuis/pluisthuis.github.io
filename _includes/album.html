@@ -1,0 +1,19 @@
+<section class="screens">
+    <div class="photo-album" id="{{ include.album_name }}">
+        {% for image in site.static_files %}
+            {% if image.path contains include.album_name and image.path contains ".jpg" %}
+                <a href="{{ image }}">
+                    <img src="{{ image }}"/>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+<script type="text/javascript">
+    lightGallery(document.getElementById('photo-album'), {
+        plugins: [lgThumbnail, lgZoom, lgVimeoThumbnail, lgVideo],
+        thumbnail: true,
+        speed: 500,
+        download: false
+    });
+</script>

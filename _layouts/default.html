@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include header.html %}
+
+<body class="darkmode">
+    <div id="__nuxt">
+        <div>
+            <aside class="left">
+                <div class="left__flex">
+                    {% include sidebar.html %}
+                </div>
+            </aside>
+            {% if page.cover_picture %}
+                <figure style="position: fixed; transform: translate(0px); opacity: 0.3;" class="global-bg"><img
+                        src="{{ page.cover_picture }}">
+                </figure>
+            {% endif %}
+            <div class="right"
+                style="translate: none; rotate: none; scale: none; transform: translate(0px); opacity: 1;">
+                <main>
+                    {{ content }}
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

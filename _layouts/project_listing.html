@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section class="home-hero content">
+    <div class="home-hero__intro">
+        {{ content }}
+    </div>
+</section>
+<ul class="project-listing">
+    {% for post in site.posts %}
+        <li class="project-listing__item">
+            <a href="{{ post.url }}" class="project-listing__item__link" data-ol-has-click-handler="">
+                {{ post.title }}
+            <small class="project-listing__item__link__year"> {{ post.date | date: "%Y" }} </small>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
