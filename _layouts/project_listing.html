@@ -9,12 +9,14 @@ layout: default
 <ul class="project-listing">
     {% for post in site.posts %}
         {% if page.category_filter == nil or post.category == page.category_filter %}
-            <li class="project-listing__item">
-                <a href="{{ post.url }}" class="project-listing__item__link" data-ol-has-click-handler="">
-                    {{ post.title | truncate: 15 }}
-                <small class="project-listing__item__link__year"> {{ post.date | date: "%Y" }}{% if page.category_filter == nil %} | {{ post.category }} {% endif %}</small>
-                </a>
-            </li>
+            {% if post.category != page.category_filter_out %}
+                <li class="project-listing__item">
+                    <a href="{{ post.url }}" class="project-listing__item__link" data-ol-has-click-handler="">
+                        {{ post.title | truncate: 30 }}
+                    <small class="project-listing__item__link__year"> {% if page.category_filter == nil %} {{ post.category }} {% endif %}</small>
+                    </a>
+                </li>
+            {% endif %}
         {% endif %}
     {% endfor %}
 </ul>
