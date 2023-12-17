@@ -408,6 +408,17 @@ main {
     max-height: 200px;
 }
 
+.video-album {
+    align-self: center;
+    justify-self: center;
+    aspect-ratio: 16 / 9;
+}
+
+.video-album > iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
 @media (max-width:767px) {
 
     .photo-album > a > img {
