@@ -428,7 +428,6 @@ main {
 }
 
 .global-bg {
-    background-color: #f96146;
     /* height: 28.125vw; */
     left: 20vw;
     opacity: 0;
@@ -436,10 +435,6 @@ main {
     top: 15vw;
     width: 60vw;
     z-index: -1
-}
-
-.darkmode .global-bg {
-    background-color: rgba(24, 5, 0, .9)
 }
 
 .global-bg img {
@@ -512,6 +507,10 @@ main {
 }
 
 /* Essay styling */
+
+.home-hero__intro > ul {
+    list-style: inside;
+}
 
 .essay > ul {
     list-style: inside
