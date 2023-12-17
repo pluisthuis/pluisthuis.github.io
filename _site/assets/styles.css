@@ -300,13 +300,13 @@ main {
     }
 }
 
-.project-listing__item {
-    border-bottom: 2px solid rgba(24, 5, 0, .9)
-}
-
-.project-listing__item:first-child {
+.project-listing__item:nth-child(n+3) {
     border-top: 2px solid rgba(24, 5, 0, .9)
 }
+
+/* .project-listing__item:first-child {
+    border-top: 2px solid rgba(24, 5, 0, .9)
+} */
 
 .darkmode .project-listing__item {
     border-color: hsla(0, 0%, 98%, .9)
@@ -365,16 +365,6 @@ main {
     line-height: max(.666rem, .8vw);
     opacity: .75;
     position: absolute
-}
-
-.project-hero__meta--tech-stack {
-    top: 13vw;
-    transform: translateX(-50%)
-}
-
-.project-hero__meta--launch-date {
-    padding-left: 1rem;
-    top: 16vw
 }
 
 @media (max-width:767px) {
