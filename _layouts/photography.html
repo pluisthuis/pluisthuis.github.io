@@ -1,3 +1,33 @@
 ---
 layout: default
 ---
+
+<section class="home-hero content">
+    <div class="home-hero__intro">
+        {{ content }}
+    </div>
+</section>
+
+<section class="screens">
+    {% for album in page.albums %}
+    <p> {{ album }} </p>
+        <div class="photo-album" id="{{ album }}">
+            {% for image in site.static_files %}
+                {% if image.path contains album %}
+                    <a href="{{ image.path }}">
+                        <img src="{{ image.path }}"/>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        <script type="text/javascript">
+            lightGallery(document.getElementById("{{ album }}"), {
+                plugins: [lgThumbnail, lgZoom, lgVimeoThumbnail, lgVideo],
+                thumbnail: true,
+                speed: 500,
+                download: false
+            });
+        </script>
+    {% endfor %}
+</section>

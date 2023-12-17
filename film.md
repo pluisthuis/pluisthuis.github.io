@@ -1,6 +1,6 @@
 ---
 layout: project_listing
-category-filter: film
+category_filter: film
 ---
 
 # Film
