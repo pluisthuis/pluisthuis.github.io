@@ -45,10 +45,6 @@ ul {
     list-style: none
 }
 
-li {
-    padding: 0.3em 0;
-}   
-
 a {
     color: rgba(24, 5, 0, .9);
     text-decoration: none
@@ -609,4 +605,25 @@ main {
 
 .up-next__link {
     cursor: help
+}
+
+/* Essay styling */
+
+.essay > ul {
+    list-style: inside
+}
+
+.essay > ul > li {
+    padding: 0.3em 0;
+}   
+
+.essay {
+    grid-column: 6/16;
+    font-size: 0.75em;
+}
+
+@media (max-width:767px) {
+    .essay {
+        grid-column: 2/16
+    }
 }
