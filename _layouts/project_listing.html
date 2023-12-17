@@ -7,7 +7,7 @@ layout: default
     </div>
 </section>
 <ul class="project-listing">
-    <p> <u>Projects:</u> </p>
+    <p> <u>Projecten:</u> </p>
     {% for post in site.posts %}
         {% if page.category_filter == nil or post.category == page.category_filter %}
             {% if post.category != page.category_filter_out %}
