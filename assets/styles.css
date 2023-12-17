@@ -453,7 +453,7 @@ main {
 .screens__item img,
 .screens__item video {
     border-radius: .875rem;
-    /* height: 100%; */
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%
