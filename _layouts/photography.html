@@ -16,7 +16,7 @@ layout: default
                 {% if image.path contains album %}
                     {% unless image.path contains 'thumbnails' %}
                         <a href="{{ image.path }}">
-                            <img src="{{ image.path }}"/>
+                            <img src="{{ image.path | replace: 'projects', 'thumbnails'}}"/>
                         </a>
                     {% endunless %}
                 {% endif %}
