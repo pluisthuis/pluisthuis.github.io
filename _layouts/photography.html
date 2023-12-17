@@ -14,9 +14,11 @@ layout: default
         <div class="photo-album" id="{{ album }}">
             {% for image in site.static_files %}
                 {% if image.path contains album %}
-                    <a href="{{ image.path }}">
-                        <img src="{{ image.path }}"/>
-                    </a>
+                    {% unless image.path contains 'thumbnails' %}
+                        <a href="{{ image.path }}">
+                            <img src="{{ image.path }}"/>
+                        </a>
+                    {% endunless %}
                 {% endif %}
             {% endfor %}
         </div>

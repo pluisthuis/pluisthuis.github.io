@@ -20,13 +20,13 @@ plugins:
   - jekyll-sitemap  # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-seo-tag  # Adds SEO tags to header to help index crawlers
 
-# # Plugin Configurations
-# mini_magick:
-#   thumbnail:
-#     source: assets/albums
-#     destination: assets/thumbnails
-#     resize: 640x480
-#     gravity: center
+# Plugin Configurations
+mini_magick:
+  thumbnail:
+    source: assets/projects
+    destination: assets/thumbnails
+    resize: 640x480
+    gravity: center
 
 
 # Exclude these files from your production _site
