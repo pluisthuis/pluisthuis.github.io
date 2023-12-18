@@ -14,7 +14,11 @@ layout: default
                 <li class="project-listing__item">
                     <a href="{{ post.url }}" class="project-listing__item__link" data-ol-has-click-handler="">
                         {{ post.title | truncate: 30 }}
-                    <small class="project-listing__item__link__year"> {% if page.category_filter == nil %} {{ post.category }} {% endif %}</small>
+                        <small class="project-listing__item__link__year"> 
+                            {% if page.category_filter == nil %} 
+                                {{ post.category }}
+                            {% endif %}
+                        </small>
                     </a>
                 </li>
             {% endif %}
