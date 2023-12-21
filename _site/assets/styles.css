@@ -530,3 +530,18 @@ main {
         grid-column: 2/16
     }
 }
+
+.essay > table > tbody > tr > td:nth-child(n + 2) {
+    text-align: center;
+    width: 2rem;
+}
+
+.essay > table > tbody > tr > td {
+    padding: 0 0 5px 0;
+}
+
+.essay > table {
+    margin: 2rem 0;
+    width: 100%;
+    font-size: 0.85em;
+}
